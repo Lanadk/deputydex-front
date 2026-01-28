@@ -1,0 +1,26 @@
+name: Test POC Script
+
+on:
+  push:
+    branches: [feat/github-actions-setup]
+  workflow_dispatch:
+
+jobs:
+  test-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📚 Install
+        run: npm ci
+
+      - name: 🚀 Run POC
+        run: npm run test:poc
