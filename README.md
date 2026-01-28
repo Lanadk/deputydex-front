@@ -51,10 +51,8 @@ Les contributions sont les bienvenues ! N'hésite pas à :
 ## 📜 License
 
 TODO © 2026 TODO
-```
 
----
-### **Vercel détecte automatiquement tes push**
+### 🚀 **Vercel détecte automatiquement tes push**
 ```
 Push sur main
 ↓
