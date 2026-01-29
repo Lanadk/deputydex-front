@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:poc": "tsx scripts/test-poc.ts"
+    "test:poc": "tsx scripts/test-poc.ts",
+    "data:generate": "tsx scripts/generate-data.ts"
   },
   "dependencies": {
     "next": "16.1.6",
