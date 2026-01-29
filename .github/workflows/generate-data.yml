@@ -1,4 +1,4 @@
-name: Generate Data
+name: Generate and Test
 
 on:
   push:
@@ -39,3 +39,25 @@ jobs:
             git commit -m "chore: update data"
             git push
           fi
+
+  test-poc:
+    needs: generate-data
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🗒️ Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: feat/github-actions-setup
+
+      - name: 📗 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📚 INSTALL
+        run: npm ci
+
+      - name: 🚀 RUN POC
+        run: npm run test:poc
