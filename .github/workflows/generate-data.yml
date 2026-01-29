@@ -1,6 +1,8 @@
 name: Generate Data
 
 on:
+  push:
+    branches: [feat/github-actions-setup]
   workflow_dispatch:
 
 jobs:
