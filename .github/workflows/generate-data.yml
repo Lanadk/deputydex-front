@@ -1,0 +1,34 @@
+name: Generate Data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run data:generate
+
+      - run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add public/data
+
+          if git diff --staged --quiet; then
+            echo "ℹNo changes to commit"
+          else
+            git commit -m "chore: update data"
+            git push
+          fi
