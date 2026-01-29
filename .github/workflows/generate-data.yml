@@ -10,26 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: 🗒️ Checkout
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v4
+      - name: 📗 Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
 
-      - run: npm ci
+      - name: 📚 INSTALL
+        run: npm ci
 
-      - run: npm run data:generate
+      - name: 🚀 Run GENERATE DATA
+        run: npm run data:generate
 
-      - run: |
+      - name: 🦆 PUSH RESULT
+        run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add public/data
 
           if git diff --staged --quiet; then
-            echo "ℹNo changes to commit"
+            echo "No changes to commit"
           else
             git commit -m "chore: update data"
             git push
