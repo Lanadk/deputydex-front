@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:poc": "tsx scripts/test-poc.ts",
+    "data:generate": "tsx scripts/generate-data.ts",
+    "prebuild": "npm run data:generate"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -21,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

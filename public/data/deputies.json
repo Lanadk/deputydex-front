@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Jean Dupont",
+    "party": "LREM",
+    "votes": 245
+  },
+  {
+    "id": 2,
+    "name": "Marie Martin",
+    "party": "LR",
+    "votes": 189
+  },
+  {
+    "id": 3,
+    "name": "Pierre Durant",
+    "party": "PS",
+    "votes": 312
+  },
+  {
+    "id": 4,
+    "name": "Sophie Leroy",
+    "party": "RN",
+    "votes": 156
+  },
+  {
+    "id": 5,
+    "name": "Luc Bernard",
+    "party": "LFI",
+    "votes": 278
+  }
+]
