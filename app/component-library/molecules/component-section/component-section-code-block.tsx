@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import React from 'react';
 import { CodeBlock } from "@/app/component-library/molecules/code-block/code-block";

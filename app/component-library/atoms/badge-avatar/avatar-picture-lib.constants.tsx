@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { AvatarLib } from "@/app/component-library/atoms/badge-avatar/avatar-picture-lib";
 

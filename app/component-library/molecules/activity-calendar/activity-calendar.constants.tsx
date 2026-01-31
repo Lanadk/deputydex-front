@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { cloneElement } from 'react';
 import {ActivityCalendarLib} from "@/app/component-library/molecules/activity-calendar/activity-calendar";

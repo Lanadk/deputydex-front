@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { ButtonLib } from "@/app/component-library/atoms/button/button-lib";
 import { FaUser } from "react-icons/fa";

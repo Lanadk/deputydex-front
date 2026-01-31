@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import {BadgeLib} from "@/app/component-library/atoms/badge/badge-lib";
 import {SpanLib} from "@/app/component-library/atoms/span/span-lib";

@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { NavLinks } from './nav-links'
 import { ThemeSwitcher } from "@/app/component-library/molecules/theme-switcher/theme-switcher"

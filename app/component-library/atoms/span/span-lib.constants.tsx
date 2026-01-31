@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { SpanLib } from "@/app/component-library/atoms/span/span-lib";
 import { Heart, ChevronRight } from "lucide-react";
