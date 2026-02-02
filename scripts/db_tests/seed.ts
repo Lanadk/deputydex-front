@@ -1,4 +1,6 @@
+/*
 import {prisma} from "@/lib/prisma";
+
 
 async function main() {
     await prisma.depute.createMany({
@@ -33,3 +35,4 @@ main()
     .finally(async () => {
         await prisma.$disconnect()
     })
+*/

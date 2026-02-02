@@ -1,5 +1,5 @@
+/*
 import {prisma} from "@/lib/prisma";
-
 
 async function main() {
     const deputes = await prisma.depute.findMany()
@@ -15,3 +15,6 @@ async function main() {
 main()
     .catch(console.error)
     .finally(async () => await prisma.$disconnect())
+
+
+ */
