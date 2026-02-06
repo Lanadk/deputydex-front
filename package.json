@@ -2,19 +2,22 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev --name init",
-    "setup:db": "npm run prisma:generate && npm run prisma:migrate"
+    "setup:db": "npm run prisma:init && npm run prisma:generate",
+    "prisma:init": "prisma init",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.3.0",
     "@prisma/client": "^7.3.0",
+    "dotenv": "^17.2.4",
     "next": "16.1.6",
+    "pg": "^8.18.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "tsx": "^4.21.0"
@@ -22,8 +25,10 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.16.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "prisma": "^7.3.0",
